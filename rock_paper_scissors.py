@@ -38,40 +38,40 @@ def score_player(user1_choice, user2_choice):
     score_u2 = 0
 
     if user1_choice == user2_choice:
-        print('No Score!')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
         ### paper
 
     elif user1_choice == 'paper' and user2_choice == 'stone':
         score_u1 += 1
-        print('1 score for user One.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
     elif user1_choice == 'paper' and user2_choice == 'scissors':
         score_u2 += 1
-        print('1 score for user Two.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
         ### stone
     elif user1_choice == 'stone' and user2_choice == 'paper':
         score_u2 += 1
-        print('1 score for user Two.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
     elif user1_choice == 'stone' and user2_choice == 'scissors':
         score_u1 += 1
-        print('1 score for user One.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
         ### scissors
     elif user1_choice == 'scissors' and user2_choice == 'stone':
         score_u2 += 1
-        print('1 score for user Two.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
     elif user1_choice == 'scissors' and user2_choice == 'paper':
         score_u1 += 1
-        print('1 score for user One.')
+        print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
 
     else:
         print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
 
-    i += 1
+
 
     ### winner player
     if score_u1 > score_u2:
@@ -90,6 +90,7 @@ if n_player == 1:
         user2 = random.choice(my_choice)
         score_player(user1, user2)
 
+        print()
         i += 1
 
 elif n_player == 2:
@@ -100,6 +101,7 @@ elif n_player == 2:
         user2 = input('Player2 , Enter your choice : ').lower()
         score_player(user1, user2)
 
+        print()
         i += 1
 
 #s = SPS()
