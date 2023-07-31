@@ -33,70 +33,73 @@ while (1):
 ### add condition
 
 def score_player(user1_choice, user2_choice):
-    i = 0
 
     score_u1 = 0
     score_u2 = 0
 
-    while i < 10:
+    if user1_choice == user2_choice:
+        print('No Score!')
 
+        ### paper
 
+    elif user1_choice == 'paper' and user2_choice == 'stone':
+        score_u1 += 1
+        print('1 score for user One.')
 
-        if user1_choice == user2_choice:
-            print('No Score!')
+    elif user1_choice == 'paper' and user2_choice == 'scissors':
+        score_u2 += 1
+        print('1 score for user Two.')
 
-            ### paper
+        ### stone
+    elif user1_choice == 'stone' and user2_choice == 'paper':
+        score_u2 += 1
+        print('1 score for user Two.')
 
-        elif user1_choice == 'paper' and user2_choice == 'stone':
-            score_u1 += 1
-            print('1 score for user One.')
+    elif user1_choice == 'stone' and user2_choice == 'scissors':
+        score_u1 += 1
+        print('1 score for user One.')
 
-        elif user1_choice == 'paper' and user2_choice == 'scissors':
-            score_u2 += 1
-            print('1 score for user Two.')
+        ### scissors
+    elif user1_choice == 'scissors' and user2_choice == 'stone':
+        score_u2 += 1
+        print('1 score for user Two.')
 
-            ### stone
-        elif user1_choice == 'stone' and user2_choice == 'paper':
-            score_u2 += 1
-            print('1 score for user Two.')
+    elif user1_choice == 'scissors' and user2_choice == 'paper':
+        score_u1 += 1
+        print('1 score for user One.')
 
-        elif user1_choice == 'stone' and user2_choice == 'scissors':
-            score_u1 += 1
-            print('1 score for user One.')
+    else:
+        print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
 
-            ### scissors
-        elif user1_choice == 'scissors' and user2_choice == 'stone':
-            score_u2 += 1
-            print('1 score for user Two.')
+    i += 1
 
-        elif user1_choice == 'scissors' and user2_choice == 'paper':
-            score_u1 += 1
-            print('1 score for user One.')
-
-        else:
-            print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
-
-        i += 1
-
-        ### winner player
-        if score_u1 > score_u2:
-            print('player 1 win')
-        elif score_u1 < score_u2:
-            print('player 2 win')
-        else:
-            print('equ.')
+    ### winner player
+    if score_u1 > score_u2:
+        print('player 1 win')
+    elif score_u1 < score_u2:
+        print('player 2 win')
+    else:
+        print('equ.')
 
 
 if n_player == 1:
 
-    user1 = input('Enter your choice : ').lower()
-    user2 = random.choice(my_choice)
-    score_player(user1, user2)
+    i = 0
+    while i < 3:
+        user1 = input('Enter your choice : ').lower()
+        user2 = random.choice(my_choice)
+        score_player(user1, user2)
+
+        i += 1
 
 elif n_player == 2:
-    user1 = input('Player1 , Enter your choice : ').lower()
-    user2 = input('Player2 , Enter your choice : ').lower()
-    score_player(user1, user2)
 
+    i = 0
+    while i < 3:
+        user1 = input('Player1 , Enter your choice : ').lower()
+        user2 = input('Player2 , Enter your choice : ').lower()
+        score_player(user1, user2)
+
+        i += 1
 
 #s = SPS()
