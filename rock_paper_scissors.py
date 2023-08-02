@@ -45,6 +45,7 @@ def score_player(n_player):
     user1_choice = user2_choice = ""
     global score_u1, score_u2
 
+    score_u1 = score_u2 = 0
 
     i = 0
     while i < 3:
@@ -55,7 +56,7 @@ def score_player(n_player):
             user1_choice = input('Player1, Enter your choice : ').lower()
             user2_choice = input('Player2, Enter your choice : ').lower()
 
-        score_u1 = score_u2 = 0
+
 
         if user1_choice == user2_choice:
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
