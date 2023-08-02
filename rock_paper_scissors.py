@@ -64,37 +64,45 @@ def score_player(n_player):
 
         if user1_choice == user2_choice:
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
             ### paper
 
         elif user1_choice == 'paper' and user2_choice == 'stone':
             score_u1 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
         elif user1_choice == 'paper' and user2_choice == 'scissors':
             score_u2 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
             ### stone
         elif user1_choice == 'stone' and user2_choice == 'paper':
             score_u2 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
         elif user1_choice == 'stone' and user2_choice == 'scissors':
             score_u1 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
             ### scissors
         elif user1_choice == 'scissors' and user2_choice == 'stone':
             score_u2 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
         elif user1_choice == 'scissors' and user2_choice == 'paper':
             score_u1 += 1
             print('score user1 : {0}\nscore user2 : {1}' .format(score_u1, score_u2))
+            print()
 
         else:
             print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
+            print()
         i += 1
 
     if score_u1 > score_u2:
