@@ -50,8 +50,12 @@ def score_player(n_player):
     i = 0
     while i < 3:
         if n_player == 1:
-            user1_choice = input('Enter your choice : ').lower()
+            user1_choice = input('Player1, Enter your choice : ').lower()
             user2_choice = random.choice(my_choice)
+
+            print('Player1, your choice : ', user1_choice)
+            print('Player2, your choice : ', user2_choice)
+
         elif n_player == 2:
             user1_choice = input('Player1, Enter your choice : ').lower()
             user2_choice = input('Player2, Enter your choice : ').lower()
