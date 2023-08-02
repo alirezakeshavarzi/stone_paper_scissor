@@ -93,6 +93,14 @@ def score_player(n_player):
             print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
         i += 1
 
+    if score_u1 > score_u2:
+        print('user 1 win')
+    elif score_u1 < score_u2:
+        print('user 2 win')
+    else:
+        print('equ.')
+
+
 
 
 ### end of function
@@ -103,20 +111,19 @@ def main(n_player):
     score_u2 = 0
 
     print('before while : score u1 : {0} , score u2 : {1} '.format(score_u1, score_u2))
-    i = 0
-    while i < 3:
-        score_player(n_player)
-        print()
-        i += 1
+    score_player(n_player)
+    print()
+
+
 
         ### winner player
-    if score_u1 > score_u2:
-        print('player 1 win')
-    elif score_u1 < score_u2:
-        print('player 2 win')
-    else:
-        print('equ.')
-### end of main function
+
+
+
+
+
+
+# main
 
 if n_player == 1:
     main(n_player)
