@@ -106,8 +106,6 @@ def main(n_player):
     i = 0
     while i < 3:
         score_player(n_player)
-
-        print('in while : score u1 : {0} , score u2 : {1} '.format(score_u1, score_u2))
         print()
         i += 1
 
