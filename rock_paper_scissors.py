@@ -112,7 +112,7 @@ def score_player(n_player):
     elif score_u1 < score_u2:
         print('user 2 win')
     else:
-        print('equ.')
+        print('equal!')
 
 
 
@@ -124,7 +124,6 @@ def main(n_player):
     score_u1 = 0
     score_u2 = 0
 
-    print('before while : score u1 : {0} , score u2 : {1} '.format(score_u1, score_u2))
     score_player(n_player)
     print()
 
