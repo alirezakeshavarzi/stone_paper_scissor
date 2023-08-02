@@ -102,7 +102,9 @@ def score_player(n_player):
 
         else:
             print("PLEASE ENTER 'STONE' , 'PAPER' OR 'SCISSORS' ")
+            i -= 1
             print()
+
         i += 1
 
     if score_u1 > score_u2:
